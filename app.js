@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
   itemDisplayCreator.buildTags(data);
   app.locals.mainData = data;
   res.render('sandbox1');
-})
+});
 
 
 

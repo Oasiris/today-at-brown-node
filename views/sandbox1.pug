@@ -1,21 +1,23 @@
 extends layout.pug
 
 block content
-  section
   if mainData
-    .content-area
-    for tag in mainData.tag_keys
-      input(type='checkbox' onclick='onclicko()' name=tag checked id=tag )
-    .content-area
+    table#filters
+      for tag in mainData.tag_keys
+        tr
+          td
+            p= tag
+          td
+            input(type='checkbox' class='super-checkbox' onclick='onclicko()' name=tag checked id=tag )
+    #content-area
       h2#content-area-title Announcements
       for announcement in mainData.announcements
         div(class='announcement-ele' id=announcement.id)
           h2.ele-title= announcement.title
           h3.ele-from-to= announcement.from_to
           p.ele-info= announcement.info
-          p.ele-more-info
-            a(href="" + announcement.more_info) Click here for more info
-    .content-area
+          p.ele-more-info= announcement.more_info
+          p.ele-more-info-text= announcement.more_info_text
       h2#content-area-title Events
       for event in mainData.events
         div(class='event-ele' id=event.id)
@@ -23,8 +25,8 @@ block content
           h3.ele-time #{event.start_time} to #{event.end_time}
           h3.ele-location= event.location_people
           p.ele-info= event.info
-          p.ele-more-info
-            a(href="" + event.more_info) Click here for more info
+          p.ele-more-info= event.more_info
+          p.ele-more-info-text= event.more_info_text
     //- for event in mainData.event
     //-   .event-ele
     //-     h2.ele-title= event.title
