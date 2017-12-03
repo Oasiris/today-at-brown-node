@@ -1,6 +1,6 @@
 #header-background {
-  height: 14.5rem;
-  background-color: #7B241C;
+  height: 16rem;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://today.brown.edu/img/tab-banner.jpg");
 }
 
 /* -------------------- */
