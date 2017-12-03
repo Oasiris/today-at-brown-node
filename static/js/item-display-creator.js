@@ -21,8 +21,8 @@ function buildTags(data){
     }
   }
   data.tags = tag_counter;
+  data.tag_keys = Object.keys(tag_counter);
 }
-
 
 module.exports = {
   buildTags

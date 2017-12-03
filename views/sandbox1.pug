@@ -4,6 +4,9 @@ block content
   section
   if mainData
     .content-area
+    for tag in mainData.tag_keys
+      input(type='checkbox' onclick='onclicko()' name=tag checked id=tag )
+    .content-area
       h2#content-area-title Announcements
       for announcement in mainData.announcements
         div(class='announcement-ele' id=announcement.id)
@@ -31,4 +34,5 @@ block content
 
   script(src='/static/js/jquery-3.2.1.min.js')
   script(src='/static/js/sandbox1-script.js')
-  script(src='/static/js/item-display.js')
+  script(type='text/javascript') !{"var tags = " + JSON.stringify(mainData.tags) + ";"}
+  script(type='text/javascript') !{"var keys = Object.keys(tags); function onclicko(){console.log('clck');for(var i = 0; i < keys.length; i++){ var b = document.getElementById(keys[i]);  var chk = b.checked;  for(var j = 0; j < tags[keys[i]]; j++){ if(chk){ document.getElementById(keys[i] + j).style.display = 'none';} else {document.getElementById(keys[i] + j).style.display = 'block';}}}}"}
