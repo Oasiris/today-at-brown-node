@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const itemDisplayCreator = require('./static/js/item-display-creator.js');
 
 // =============================================================================
 // Helper Functions
@@ -28,11 +29,11 @@ app.use("/static", express.static(path.join(__dirname, "static")));
 // =============================================================================
 
 app.get('/', (req, res) => {
-  const data = require('./dataComplete.json');
+  var data = require('./dataComplete.json');
+  itemDisplayCreator.buildTags(data);
   app.locals.mainData = data;
-  app.locals.myArray = ['a', 'b'];
   res.render('sandbox1');
-})
+});
 
 
 

@@ -1,21 +1,26 @@
 extends layout.pug
 
 block content
-  section
   if mainData
-    .content-area
+    table#filters
+      for tag in mainData.tag_keys
+        tr
+          td
+            p= tag
+          td
+            input(type='checkbox' class='super-checkbox' onclick='onclicko()' name=tag checked id=tag )
+    #content-area
       h2#content-area-title Announcements
       for announcement in mainData.announcements
-        .announcement-ele
+        div(class='announcement-ele' id=announcement.id)
           h2.ele-title= announcement.title
           h3.ele-from-to= announcement.from_to
           p.ele-info= announcement.info
           p.ele-more-info= announcement.more_info
           p.ele-more-info-text= announcement.more_info_text
-    .content-area
       h2#content-area-title Events
       for event in mainData.events
-        .event-ele
+        div(class='event-ele' id=event.id)
           h2.ele-title= event.title
           h3.ele-time #{event.start_time} to #{event.end_time}
           h3.ele-location= event.location_people
@@ -31,3 +36,5 @@ block content
   
   script(src='/static/js/jquery-3.2.1.min.js')
   script(src='/static/js/sandbox1-script.js')
+  script(type='text/javascript') !{"var tags = " + JSON.stringify(mainData.tags) + ";"}
+  script(type='text/javascript') !{"var keys = Object.keys(tags); function onclicko(){console.log('clck');for(var i = 0; i < keys.length; i++){ var b = document.getElementById(keys[i]);  var chk = b.checked;  for(var j = 0; j < tags[keys[i]]; j++){ if(chk){ document.getElementById(keys[i] + j).style.display = 'block';} else {document.getElementById(keys[i] + j).style.display = 'none';}}}}"}
