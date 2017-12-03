@@ -1,12 +1,19 @@
 #header-background {
   height: 14.5rem;
-  background-color: #922B21;
+  background-color: #7B241C;
 }
 
-#title-t-a-b {
+#title-text {
   text-align: center;
   padding: 5.0rem 5.0rem;
   color: white;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+#title-t-a-b-name {
+  color: #E6B0AA;
+  font-weight: 700;
 }
 
 .container {
@@ -16,19 +23,28 @@
 }
 
 .announcement-ele {
-  padding: 2px 4px;
+  padding: 0.8rem;
   text-align: center;
+
+  -webkit-transition-duration: 0.2s; /* Safari */
+  transition-duration: 0.2s;
 }
 
-.announcement-ele:nth-child(even) {
-  background-color: #eee;
 
+.announcement-ele:nth-child(even) {
+  background-color: #f3f3f3;
+
+}
+
+.announcement-ele:hover {
+  background-color: #E6B0AA;
 }
 
 .ele-title {
   font-size: 1.4rem;
   text-decoration: none;
   line-height: 1;
+  margin-top: 6px;
   margin-bottom: 4px;
 }
 
@@ -53,3 +69,6 @@
   font-size: 1.0rem;
   line-height: 1;
 }
+
+
+
