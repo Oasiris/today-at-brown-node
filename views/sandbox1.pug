@@ -2,13 +2,24 @@ extends layout.pug
 
 block content
   if mainData
-    table#filters
-      for tag in mainData.tag_keys
+    #filters
+      table
         tr
           td
-            p= tag
+            button(type='button' onclick='checkall()') Check all
           td
-            input(type='checkbox' class='super-checkbox' onclick='onclicko()' name=tag checked id=tag )
+            p :)
+        tr
+          td
+            button(type='button' onclick='uncheckall()') Uncheck all
+          td
+            p :)            
+        for tag in mainData.tag_keys
+          tr
+            td
+              p= tag
+            td
+              input(type='checkbox' class='super-checkbox' onclick='onclicko()' name=tag checked id=tag )
     #content-area
       h2#content-area-title Announcements
       for announcement in mainData.announcements
@@ -38,3 +49,5 @@ block content
   script(src='/static/js/sandbox1-script.js')
   script(type='text/javascript') !{"var tags = " + JSON.stringify(mainData.tags) + ";"}
   script(type='text/javascript') !{"var keys = Object.keys(tags); function onclicko(){console.log('clck');for(var i = 0; i < keys.length; i++){ var b = document.getElementById(keys[i]);  var chk = b.checked;  for(var j = 0; j < tags[keys[i]]; j++){ if(chk){ document.getElementById(keys[i] + j).style.display = 'block';} else {document.getElementById(keys[i] + j).style.display = 'none';}}}}"}
+  script(type='text/javascript') !{"function checkall(){for(var i = 0; i < keys.length; i++){document.getElementById(keys[i]).checked = true;} onclicko();}"}
+  script(type='text/javascript') !{"function uncheckall(){for(var i = 0; i < keys.length; i++){document.getElementById(keys[i]).checked = false;} onclicko();}"}

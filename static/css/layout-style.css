@@ -8,6 +8,7 @@
 
 
 #title-text {
+  margin: 0;
   font-size: 4.0rem;
   text-align: center;
   padding: 5.0rem 5.0rem;
@@ -30,6 +31,10 @@ div.hidden {
 
 /* -------------------- */
 
+#filters button {
+  font-size: 1.0rem;
+}
+
 #filters {
   position: fixed;
   display: block;
@@ -42,19 +47,23 @@ div.hidden {
 #filters table {
   margin: 0 auto;
   text-align: center;
+  border-spacing: 0px;
 }
 
 .super-checkbox {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
 }
 
 #filters p {
   margin: 0;
   padding: 0;
-  font-size: 1.0rem;
+  font-size: 0.9rem;
 }
 
+#filters table tr td {
+  padding: 0px 10px;
+}
 
 /* -------------------- */
 
