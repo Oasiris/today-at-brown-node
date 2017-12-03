@@ -19,6 +19,8 @@
   "homepage": "https://github.com/Oasiris/today-at-brown-node#readme",
   "dependencies": {
     "express": "^4.16.2",
+    "moment": "^2.19.3",
+    "moment-timezone": "^0.5.14",
     "pug": "^2.0.0-rc.4"
   }
 }
