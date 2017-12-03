@@ -6,21 +6,21 @@ block content
     .content-area
       h2#content-area-title Announcements
       for announcement in mainData.announcements
-        .announcement-ele
+        div(class='announcement-ele' id=announcement.id)
           h2.ele-title= announcement.title
           h3.ele-from-to= announcement.from_to
           p.ele-info= announcement.info
-          p.ele-more-info 
+          p.ele-more-info
             a(href="" + announcement.more_info) Click here for more info
     .content-area
       h2#content-area-title Events
       for event in mainData.events
-        .announcement-ele
+        .event-ele
           h2.ele-title= event.title
           h3.ele-time #{event.start_time} to #{event.end_time}
           h3.ele-location= event.location_people
           p.ele-info= event.info
-          p.ele-more-info 
+          p.ele-more-info
             a(href="" + event.more_info) Click here for more info
     //- for event in mainData.event
     //-   .event-ele
@@ -28,6 +28,7 @@ block content
     //-     h3.ele-from-to= event.from_to
     //-     p.ele-info= event.info
     //-     p.ele-more-info More info: #{event.more_info}
-  
+
   script(src='/static/js/jquery-3.2.1.min.js')
   script(src='/static/js/sandbox1-script.js')
+  script(src='/static/js/item-display.js')
