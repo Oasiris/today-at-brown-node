@@ -1,4 +1,15 @@
 #title-t-a-b {
-	text-align: center;
-	
+  text-align: center;
+
+}
+
+.container {
+  max-width: 96.0rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.announcement-ele {
+
 }

@@ -1,5 +1,5 @@
 {
-  "Announcements":[
+  "announcements":[
     {
       "title":"Food on the Move TODAY Dec 1 Sponsored by CHER",
       "from_to":"Eliza Cohen - All",
@@ -73,7 +73,7 @@
       "more_info":"https://today.brown.edu/archive.php?id=100994&utm_source=todayAtBrown&utm_medium=email&utm_campaign=allConstituents"
     }
   ],
-  "Events":[
+  "events":[
     {
       "title":"TODAY, FOUNDER FRIDAYS: CO-FOUNDER OF MISSION CURE",
       "start_time":"2017-12-02 12:00:00",

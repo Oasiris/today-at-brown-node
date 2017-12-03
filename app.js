@@ -28,6 +28,8 @@ app.use("/static", express.static(path.join(__dirname, "static")));
 // =============================================================================
 
 app.get('/', (req, res) => {
+  const data = require('./data.json');
+  app.locals.mainData = data;
   res.render('sandbox1');
 })
 
