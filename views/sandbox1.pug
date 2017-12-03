@@ -18,7 +18,7 @@ block content
     .content-area
       h2#content-area-title Events
       for event in mainData.events
-        .event-ele
+        div(class='event-ele' id=event.id)
           h2.ele-title= event.title
           h3.ele-time #{event.start_time} to #{event.end_time}
           h3.ele-location= event.location_people
