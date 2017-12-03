@@ -3,7 +3,11 @@
   background-color: #7B241C;
 }
 
+/* -------------------- */
+
+
 #title-text {
+  font-size: 3.6rem;
   text-align: center;
   padding: 5.0rem 5.0rem;
   color: white;
@@ -16,13 +20,26 @@
   font-weight: 700;
 }
 
+/* -------------------- */
+
+
 .container {
   max-width: 70.0rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-.announcement-ele {
+/* -------------------- */
+
+#content-area-title {
+  text-align: center;
+  color: #7B241C;
+}
+
+
+/* -------------------- */
+
+.announcement-ele, .event-ele {
   padding: 0.8rem;
   text-align: center;
 
@@ -31,12 +48,12 @@
 }
 
 
-.announcement-ele:nth-child(even) {
+.announcement-ele:nth-child(even), .event-ele:nth-child(even) {
   background-color: #f3f3f3;
 
 }
 
-.announcement-ele:hover {
+.announcement-ele:hover, .event-ele:hover {
   background-color: #E6B0AA;
 }
 
@@ -48,9 +65,8 @@
   margin-bottom: 4px;
 }
 
-.ele-from-to {
-  margin-top: 4px;
-  margin-bottom: 10px;
+.ele-from-to, .ele-time, .ele-location {
+  margin: 2px 0;
   color: #888;
   font-size: 1.0rem;
   text-decoration: none;
@@ -70,5 +86,14 @@
   line-height: 1;
 }
 
+/* -------------------- */
 
 
+footer {
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 45px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
