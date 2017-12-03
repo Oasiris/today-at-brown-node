@@ -1,15 +1,44 @@
 #header-background {
-  height: 14.5rem;
+  height: 18.0rem;
   background-color: #7B241C;
 }
+
+div.hidden {
+    display: none
+}
+
+/* -------------------- */
+
+.container {
+  max-width: 70.0rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -------------------- */
+
+#more-info-area {
+  display: block;
+  position: absolute;
+  z-index: 10;
+
+  
+  width: 70.0rem;
+  height: 70.0rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  
+  background-color: yellow;
+}
+
 
 /* -------------------- */
 
 
 #title-text {
-  font-size: 3.6rem;
+  font-size: 4.0rem;
   text-align: center;
-  padding: 5.0rem 5.0rem;
+  padding: 6.0rem 6.0rem;
   color: white;
   text-decoration: none;
   font-weight: 300;
@@ -20,14 +49,6 @@
   font-weight: 700;
 }
 
-/* -------------------- */
-
-
-.container {
-  max-width: 70.0rem;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 /* -------------------- */
 
@@ -40,7 +61,8 @@
 /* -------------------- */
 
 .announcement-ele, .event-ele {
-  padding: 0.8rem;
+  display: block;
+  padding: 1.1rem;
   text-align: center;
 
   -webkit-transition-duration: 0.2s; /* Safari */
@@ -54,7 +76,14 @@
 }
 
 .announcement-ele:hover, .event-ele:hover {
-  background-color: #E6B0AA;
+  background-color: #F2D7D5;
+  cursor: pointer;
+  -webkit-transition-duration: 0.05s; /* Safari */
+  transition-duration: 0.05s;
+}
+
+.announcement-ele:active, .event-ele:active {
+  background-color: #D98880;
 }
 
 .ele-title {

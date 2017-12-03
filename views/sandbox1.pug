@@ -10,18 +10,18 @@ block content
           h2.ele-title= announcement.title
           h3.ele-from-to= announcement.from_to
           p.ele-info= announcement.info
-          p.ele-more-info 
-            a(href="" + announcement.more_info) Click here for more info
+          p.ele-more-info= announcement.more_info
+          p.ele-more-info-text= announcement.more_info_text
     .content-area
       h2#content-area-title Events
       for event in mainData.events
-        .announcement-ele
+        .event-ele
           h2.ele-title= event.title
           h3.ele-time #{event.start_time} to #{event.end_time}
           h3.ele-location= event.location_people
           p.ele-info= event.info
-          p.ele-more-info 
-            a(href="" + event.more_info) Click here for more info
+          p.ele-more-info= event.more_info
+          p.ele-more-info-text= event.more_info_text
     //- for event in mainData.event
     //-   .event-ele
     //-     h2.ele-title= event.title
