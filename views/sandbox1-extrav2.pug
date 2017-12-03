@@ -2,9 +2,9 @@ extends layout.pug
 
 block content
   section
-   //- h2 Welcome, student!
   if mainData
-    h2 Announcements
+    .content-area
+      h2#content-area-title Announcements
       for announcement in mainData.announcements
         .announcement-ele
           h2.ele-title= announcement.title
@@ -12,11 +12,13 @@ block content
           p.ele-info= announcement.info
           p.ele-more-info 
             a(href="" + announcement.more_info) Click here for more info
-    h2 Events
+    .content-area
+      h2#content-area-title Events
       for event in mainData.events
         .announcement-ele
           h2.ele-title= event.title
-          h3.ele-from-to= event.from_to
+          h3.ele-time #{event.start_time} to #{event.end_time}
+          h3.ele-location= event.from_to
           p.ele-info= event.info
           p.ele-more-info 
             a(href="" + event.more_info) Click here for more info

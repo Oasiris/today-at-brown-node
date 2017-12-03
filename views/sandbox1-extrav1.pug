@@ -1,0 +1,22 @@
+extends layout.pug
+
+block content
+  section
+   //- h2 Welcome, student!
+  if mainData
+    for announcement in mainData.announcements
+      .announcement-ele
+        h2.ele-title= announcement.title
+        h3.ele-from-to= announcement.from_to
+        p.ele-info= announcement.info
+        p.ele-more-info 
+          a(href="" + announcement.more_info) Click here for more info
+    //- for event in mainData.event
+    //-   .event-ele
+    //-     h2.ele-title= event.title
+    //-     h3.ele-from-to= event.from_to
+    //-     p.ele-info= event.info
+    //-     p.ele-more-info More info: #{event.more_info}
+  
+  script(src='/static/js/jquery-3.2.1.min.js')
+  script(src='/static/js/sandbox1-script.js')
