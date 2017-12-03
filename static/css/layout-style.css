@@ -1,15 +1,55 @@
+#header-background {
+  height: 14.5rem;
+  background-color: #922B21;
+}
+
 #title-t-a-b {
   text-align: center;
-
+  padding: 5.0rem 5.0rem;
+  color: white;
 }
 
 .container {
-  max-width: 96.0rem;
+  max-width: 70.0rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-
 .announcement-ele {
+  padding: 2px 4px;
+  text-align: center;
+}
 
+.announcement-ele:nth-child(even) {
+  background-color: #eee;
+
+}
+
+.ele-title {
+  font-size: 1.4rem;
+  text-decoration: none;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.ele-from-to {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  color: #888;
+  font-size: 1.0rem;
+  text-decoration: none;
+  font-variant: small-caps;
+  line-height: 1;
+}
+
+.ele-info {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.ele-more-info {
+  margin: 4px 0;
+  font-size: 1.0rem;
+  line-height: 1;
 }
